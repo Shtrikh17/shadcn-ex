@@ -1,0 +1,41 @@
+@import "../style";
+
+.scotch-select-search{
+  @extend ._scotch-select-container;
+}
+
+.scotch-select-search-input{
+  @extend ._scotch-select-input;
+  input{
+    border: none;
+    width: 100%;
+    outline: none;
+  }
+  &:hover{
+    input{
+      background-color: var(--scotchHoverBackground);
+    }
+  }
+}
+
+.scotch-select-search-popover{
+  @extend ._scotch-select-popover;
+}
+
+.scotch-select-search-input-value{
+  flex: 1;
+}
+
+.scotch-select-search-popover-item{
+  @extend ._scotch-select-popover-item;
+}
+
+.scotch-select-search-icon-reset{
+  &:hover{
+    color: var(--scotchDangerColor);
+  }
+}
+
+.scotch-select-search-input-placeholder{
+  color: darkgray;
+}

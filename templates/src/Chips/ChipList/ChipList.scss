@@ -1,0 +1,25 @@
+
+.scotch-chip-list{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding: 2px 0.5rem;
+  gap: 10px;
+}
+
+.scotch-chip-list-dots{
+  padding: 2px 10px;
+  text-align: center;
+  cursor: pointer;
+  height: auto;
+  background-color: white;
+}
+
+.scotch-chip-popover{
+  max-width: 400px;
+  width: max-content;
+  border: thin solid lightgray;
+  padding: 10px;
+  border-radius: var(--scotchBorderRadius);
+  background-color: white;
+}

@@ -1,0 +1,18 @@
+$primaryColor: #00b96b;
+$secondaryColor: #36558F;
+$grayColor: #e3e3e3;
+$blackColor: rgba(0,0,0,0.88);
+$redColor: #D7263D;
+$darkGrayColor: #333333;
+
+:root {
+  --primaryColor: #{$primaryColor}; // this one works
+  --secondaryColor: #{$secondaryColor};
+  --grayColor: #{$grayColor};
+  --blackColor: #{$blackColor};
+  --redColor: #{$redColor};
+  --successColor: #{$primaryColor};
+  --dangerColor: #{$redColor};
+  --darkGrayColor: #{$darkGrayColor};
+  --focusBgColor: #{#f5f5f5};
+}

@@ -1,0 +1,38 @@
+
+
+._scotch-select-container{
+  width: 100%;
+}
+
+._scotch-select-input{
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  border: thin solid lightgray;
+  border-radius: var(--scotchBorderRadius);
+  align-items: center;
+
+  cursor: pointer;
+  &:hover{
+    background-color: #f4f4f4;
+  }
+}
+
+._scotch-select-popover{
+  margin-top: 5px;
+  background-color: white;
+  padding: 10px;
+  border-radius: var(--scotchBorderRadius);
+  border: thin solid lightgray;
+  width: var(--radix-popper-anchor-width);
+  box-sizing: border-box;
+}
+
+._scotch-select-popover-item{
+  padding: 5px;
+  cursor: pointer;
+  border-radius: var(--scotchBorderRadius);
+  &:hover{
+    background-color: var(--scotchHoverBackground);
+  }
+}

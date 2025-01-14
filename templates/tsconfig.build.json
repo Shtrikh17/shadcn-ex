@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es5",
+        "lib": [
+            "es2015",
+            "es2016",
+            "es2017",
+            "dom"
+        ],
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "declaration": true,
+        "declarationDir": "dist",
+        "moduleResolution": "node",
+        "rootDir": "./src",
+        "esModuleInterop": true
+    },
+    "include": [
+        "src",
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/**/*.mdx",
+        "src/**/*.stories.tsx",
+        "src/**/*.test.tsx"
+    ]
+}

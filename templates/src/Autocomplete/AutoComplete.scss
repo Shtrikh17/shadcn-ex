@@ -1,0 +1,41 @@
+@import "../Select/style";
+
+.scotch-autocomplete{
+  @extend ._scotch-select-container;
+}
+
+.scotch-autocomplete-input{
+  @extend ._scotch-select-input;
+  input{
+    border: none;
+    width: 100%;
+    outline: none;
+  }
+  &:hover{
+    input{
+      background-color: var(--scotchHoverBackground);
+    }
+  }
+}
+
+.scotch-autocomplete-input-value{
+  flex: 1;
+}
+
+.scotch-autocomplete-popover{
+  @extend ._scotch-select-popover;
+}
+
+.scotch-autocomplete-popover-item{
+  @extend ._scotch-select-popover-item;
+}
+
+.scotch-autocomplete-icon-reset{
+  &:hover{
+    color: var(--scotchDangerColor);
+  }
+}
+
+.scotch-autocomplete-input-placeholder{
+  color: darkgray;
+}

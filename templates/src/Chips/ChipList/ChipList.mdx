@@ -1,0 +1,21 @@
+import {Canvas, Meta, Controls, Markdown} from "@storybook/blocks"
+import * as ChipStories from "./ChipList.stories.tsx"
+import Styling from "./Styling.md?raw"
+
+<Meta of={ChipStories} />
+
+# ChipList
+ChipList is a collection of badges used to display several chips.
+
+## Props
+<Controls />
+
+## Styling
+You have two options to style the chip:
+1. Pass `className` prop
+2. Overload CSS classes:
+<Markdown>{Styling}</Markdown>
+
+
+## Example
+<Canvas of={ChipStories.Example} />
