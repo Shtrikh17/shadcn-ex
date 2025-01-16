@@ -17,8 +17,13 @@ program
     .arguments("<command>", "install | remove")
     .argument("<component>", "Name of the component to add to current project")
     .action((command: string, component: string) => {
+        console.log(__dirname, command);
+
         if(command === "install") {
             install_component(component);
+        }
+        else if(command === "remove") {
+
         }
 
 

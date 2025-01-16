@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,6 +10,15 @@ export default {
       spacing:{
           2: '4px',
           4: '12px',
+      },
+      colors: {
+          accent: {
+              DEFAULT: 'lightgray'
+          },
+          background: {
+              DEFAULT: 'white',
+          },
+          ...colors
       },
     extend: {},
   },
