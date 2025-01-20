@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
-    "build": "tsc",
+    "build": "./build.sh",
     "test": "npm run build && npm run "
   },
   "bin": {

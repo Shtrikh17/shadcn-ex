@@ -1,0 +1,8 @@
+[
+  {
+    "name": "SimpleSelect",
+    "files": ["Select/SimpleSelect/SimpleSelect.tsx"],
+    "dependencies": ["popover.tsx"]
+  }
+]
+
