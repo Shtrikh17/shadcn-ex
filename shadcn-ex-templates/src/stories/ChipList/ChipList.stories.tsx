@@ -1,7 +1,8 @@
+// @ts-ignore
 import React from "react"
 import {Meta, StoryObj} from "@storybook/react";
-import {ChipList} from "./ChipList";
-import {Chip} from "../Chip/Chip";
+import {ChipList} from "../../Chips/ChipList";
+import {Chip} from "../../Chips/Chip";
 
 const meta: Meta<typeof ChipList> = {
     component: ChipList,

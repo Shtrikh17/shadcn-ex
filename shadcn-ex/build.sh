@@ -3,7 +3,10 @@ tsc
 cp src/components.json dist/
 
 FILES_TO_COPY=(
-  "Select/SimpleSelect/SimpleSelect.tsx"
+  "Select/SimpleSelect.tsx"
+  "Select/types.ts"
+  "Chips/Chip.tsx"
+  "Chips/ChipList.tsx"
 )
 SOURCE_DIR="../shadcn-ex-templates/src"
 DEST_DIR="./dist"

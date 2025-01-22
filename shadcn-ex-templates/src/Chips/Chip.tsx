@@ -1,5 +1,15 @@
 import React from 'react';
-import {ChipProps} from "./Chip.types";
+
+export interface ChipProps {
+    /** Chip content */
+    children: string | React.ReactNode,
+
+    /** ClassName appended to wrapper */
+    className?: string
+
+    /** A list of nodes appended as flex items after children */
+    actions?: React.ReactNode[]
+}
 
 export const Chip = (props: ChipProps) => {
     return <div className={"px-2 border-solid rounded border-[1px] border-lightgray inline-block items-center justify-center"}>

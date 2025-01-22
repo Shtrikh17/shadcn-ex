@@ -14,7 +14,11 @@
         "declaration": true,
         "declarationDir": "dist",
         "moduleResolution": "node",
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "paths": {
+            "@/*": ["./*"]
+        }
     },
     "include": [
         "src",
@@ -25,5 +29,6 @@
         "dist",
         "src/**/*.stories.tsx",
         "src/**/*.test.tsx"
-    ]
+    ],
+
 }

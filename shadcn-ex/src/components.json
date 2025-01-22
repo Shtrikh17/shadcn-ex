@@ -1,8 +1,22 @@
-[
-  {
+{
+  "registry": [{
     "name": "SimpleSelect",
-    "files": ["Select/SimpleSelect/SimpleSelect.tsx"],
-    "dependencies": ["popover.tsx"]
+    "files": ["Select/SimpleSelect.tsx", "Select/types.ts"],
+    "requirements": ["popover"]
+  },
+  {
+    "name": "Chip",
+    "files": ["Chips/Chip.tsx"]
+  },
+  {
+    "name": "ChipList",
+    "files": ["Chips/ChipList.tsx"],
+    "requirements": ["popover"],
+    "dependencies": ["Chip"]
   }
-]
+  ],
+  "requirements": [
+    {"name":  "popover", "file": "popover.tsx"}
+  ]
+}
 

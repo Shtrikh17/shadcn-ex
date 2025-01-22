@@ -1,11 +1,31 @@
 import React, {useRef, useState} from "react";
-import "./MultiSelect.scss"
-import {MultiSelectProps} from "./MultiSelect.types";
 import {CheckIcon, ChevronDown, TrashIcon} from "lucide-react";
-import {SelectItem} from "../types";
+import {SelectItem} from "./types";
 import * as Popover from "@radix-ui/react-popover"
-import {ChipList} from "../../Chips/ChipList/ChipList";
-import {Chip} from "../../Chips/Chip/Chip";
+import {ChipList} from "../Chips/ChipList";
+import {Chip} from "../Chips/Chip";
+import {IconsProps} from "../Chips/StringChipsInput/StringChipsInput.types";
+
+export interface MultiSelectProps {
+    /** Array of items */
+    items: SelectItem[],
+
+    /** Function to select items */
+    onSelect: (value: SelectItem[]) => void,
+
+    /** Current selection */
+    value: SelectItem[],
+
+    /** MaxChips */
+    maxChips?: number
+
+    /** Caption */
+    caption?: string
+
+    /** Icons */
+    icons?: IconsProps
+}
+
 
 export const MultiSelect = ({...props}: MultiSelectProps) => {
     const [open, setOpen] = useState(false)

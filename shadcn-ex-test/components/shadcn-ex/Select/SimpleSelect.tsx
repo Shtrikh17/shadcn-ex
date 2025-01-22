@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 import {ChevronDown, XIcon} from "lucide-react";
-import {SelectItem} from "../types";
+import {SelectItem} from "./types";
 import * as Popover from "@radix-ui/react-popover"
 
 interface SimpleSelectProps {
@@ -37,8 +37,8 @@ export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true
     }
     else{
         icon = <XIcon
-            size={25}
-            className={"hover:bg-red-500 hover:text-white rounded p-2 cursor-pointer"}
+            size={20}
+            className={"hover:bg-destructive hover:text-destructive-foreground rounded p-1 cursor-pointer"}
             onClick={(e) => {
                 handleSelect(e, null)
             }}
@@ -50,7 +50,11 @@ export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true
         <Popover.Root open={open} onOpenChange={setOpen} >
             <Popover.Trigger style={{display: 'none'}}/>
             <Popover.Anchor asChild>
-                <div className={"rounded flex border-solid border-[1px] border-lightgray p-2 items-center hover:bg-gray-200 cursor-pointer"} onClick={() => setOpen(x=>!x)} >
+                <div
+                    className={"rounded flex border-solid border-[1px] border-lightgray p-1 px-2 " +
+                    "items-center hover:bg-accent cursor-pointer h-[30px] bg-background"}
+                     onClick={() => setOpen(x=>!x)}
+                >
                     <div className={"flex-1"}>
                         {value?.label || <div className={"text-gray-700"}>{placeholder}</div>}
                     </div>
@@ -62,7 +66,7 @@ export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true
                     " border-gray-600 p-2 box-border w-[var(--radix-popper-anchor-width)]"}>
                     <div>
                         {items.map(x => <div
-                            className={"p-2 cursor-pointer rounded hover:bg-accent"}
+                            className={"px-2 py-1 cursor-pointer rounded hover:bg-accent"}
                             onMouseDown={(e) => handleSelect(e, x)}
                             key={"d-content-"+x.value}
                         >

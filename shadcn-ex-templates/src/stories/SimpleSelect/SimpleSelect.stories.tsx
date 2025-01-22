@@ -1,12 +1,14 @@
+// @ts-ignore
 import React, {useEffect, useState} from "react"
 import {Meta, StoryObj} from "@storybook/react";
-import {SimpleSelect} from "./SimpleSelect.tsx"
-import {SelectItem} from "../types";
+import {SimpleSelect} from "../../Select/SimpleSelect"
+import {SelectItem} from "../../Select/types";
 import * as Dialog from "@radix-ui/react-dialog"
 import "./Story.scss"
 
 const meta: Meta<typeof SimpleSelect> = {
-    component: SimpleSelect
+    component: SimpleSelect,
+    title: 'Select/SimpleSelect',
 }
 
 export default meta
@@ -72,7 +74,7 @@ export const ExampleWithModal = () => {
 
     return <Dialog.Root>
         <Dialog.Trigger>
-            OPEN
+            <div className={"DialogTrigger"}>OPEN</div>
         </Dialog.Trigger>
         <Dialog.Portal>
             <Dialog.Overlay className={"DialogOverlay"} />

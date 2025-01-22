@@ -1,10 +1,10 @@
 import {AutoComplete} from "./Autocomplete/AutoComplete"
-import {SimpleSelect} from "./Select/SimpleSelect/SimpleSelect"
-import {MultiSelect} from "./Select/MultiSelect/MultiSelect"
+import {SimpleSelect} from "./Select/SimpleSelect"
+import {MultiSelect} from "./Select/MultiSelect"
 import {SearchSelect} from "./Select/SearchSelect/SearchSelect"
 import {SearchMultiSelect} from "./Select/SearchMultiSelect/SearchMultiSelect"
-import {Chip} from "./Chips/Chip/Chip"
-import {ChipList} from "./Chips/ChipList/ChipList"
+import {Chip} from "./Chips/Chip"
+import {ChipList} from "./Chips/ChipList"
 import {StringChipsInput} from "./Chips/StringChipsInput/StringChipsInput"
 
 export {

@@ -4,8 +4,8 @@ import {SearchMultiSelectProps} from "./SearchMultiSelect.types";
 import {CheckIcon, ChevronDown, TrashIcon} from "lucide-react";
 import {SelectItem} from "../types";
 import * as Popover from "@radix-ui/react-popover"
-import {ChipList} from "../../Chips/ChipList/ChipList";
-import {Chip} from "../../Chips/Chip/Chip";
+import {ChipList} from "../../Chips/ChipList";
+import {Chip} from "../../Chips/Chip";
 
 export const SearchMultiSelect = ({collapseOnSelect=false, ...props}: SearchMultiSelectProps) => {
     const targetRef = useRef(null)

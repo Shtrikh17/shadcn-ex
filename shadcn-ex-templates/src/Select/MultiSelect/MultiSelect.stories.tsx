@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import {Meta, StoryObj} from "@storybook/react";
-import {MultiSelect} from "./MultiSelect.tsx"
+import {MultiSelect} from "../MultiSelect.tsx"
 import {SelectItem} from "../types";
 
 const meta: Meta<typeof MultiSelect> = {

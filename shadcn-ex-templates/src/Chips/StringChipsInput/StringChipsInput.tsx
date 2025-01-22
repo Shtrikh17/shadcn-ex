@@ -1,9 +1,9 @@
 import React, { useRef, KeyboardEvent, useState } from 'react';
 import "./StringChipsInput.scss"
-import {Chip} from "../Chip/Chip"
+import {Chip} from "../Chip"
 import {IconsProps, StringChipsInputProps} from "./StringChipsInput.types";
 import {Plus, TrashIcon} from "lucide-react";
-import {ChipList} from "../ChipList/ChipList";
+import {ChipList} from "../ChipList";
 
 export const StringChipsInput = ({addOnLeave=false, keys=["Enter", ",", ";"], ...props}: StringChipsInputProps) => {
     const inputRef = useRef<HTMLInputElement>(null);
