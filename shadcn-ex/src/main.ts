@@ -14,19 +14,12 @@ program
     .version("1.0.0");
 
 program
-    .arguments("<command>", "add | remove")
+    .arguments("<command>", "add")
     .argument("<component>", "Name of the component to add to current project")
     .action((command: string, component: string) => {
         if(command === "add") {
             install_component(component);
         }
-        else if(command === "remove") {
-
-        }
-
-
-      // fs.copySync(componentPath, destPath);
-      // console.log(`Copied "${component}" to "${destPath}"`);
     })
     
 

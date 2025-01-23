@@ -10,6 +10,7 @@ FILES_TO_COPY=(
   "Select/MultiSelect.tsx"
   "Select/SearchSelect.tsx"
   "Select/SearchMultiSelect.tsx"
+  "Input/StringsListInput.tsx"
 )
 SOURCE_DIR="../shadcn-ex-templates/src"
 DEST_DIR="./dist"

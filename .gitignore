@@ -4,5 +4,6 @@ dist/
 .yarnrc.yml
 .idea/
 .yarn/
-*storybook.log
-.vercel
+**/*storybook.log
+**/storybook-static
+**/.vercel

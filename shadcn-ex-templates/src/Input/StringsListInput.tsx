@@ -61,7 +61,7 @@ const AddNewStringButton = (props: {
         <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild={true}>
                 <PlusIcon
-                    className={"cursor-pointer p-1 rounded hover:bg-primary hover:text-primary-foreground"}
+                    className={"cursor-pointer p-1 rounded hover:bg-accent hover:text-accent-foreground"}
                     size={25}
                     onClick={() => setOpen(true)}
                 />

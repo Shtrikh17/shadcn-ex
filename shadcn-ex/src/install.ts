@@ -38,6 +38,7 @@ export const install_component = (name: string, offset=0) => {
     }
 
     if(componentMeta.requirements){
+
         for(let dep of componentMeta.requirements) {
             console.log(`${' '.repeat(offset*2)}[*] ${name} requires ${dep} of shadcn. Checking installation...`)
             if(!checkComponentDependency(dep, componentsMeta.requirements, offset)){
@@ -68,9 +69,10 @@ const getTargetDirectory = () => {
     return target_directory;
 }
 
-const getShadcnDirectory = (): string => {
-    const target_project_directory = process.cwd();
-    return path.join(target_project_directory, "components", "ui");
+const getShadcnDirectory = (): string | null => {
+    let componentsPath = getComponentsPath()
+    if(!componentsPath) return null
+    return path.join(componentsPath, "components", "ui");
 }
 
 const checkComponentDependency = (component: string, requirements: RequirementType[], offset=0) => {
@@ -88,3 +90,19 @@ const checkComponentDependency = (component: string, requirements: RequirementTy
     }
     return false
 }
+
+const getComponentsPath = (): string | null => {
+    const target_project_directory = process.cwd();
+    let tsConfigContents = fs.readFileSync(`${target_project_directory}/tsconfig.json`).toString();
+    let tsConfig = JSON.parse(tsConfigContents);
+    let paths = tsConfig.compilerOptions.paths["@/*"];
+    if(!paths?.length){
+        return null
+    }
+    let componentsPath = paths[0]
+    if(componentsPath.endsWith('*')){
+        componentsPath = componentsPath.slice(0, -1)
+    }
+    return path.join(target_project_directory, componentsPath)
+}
+
