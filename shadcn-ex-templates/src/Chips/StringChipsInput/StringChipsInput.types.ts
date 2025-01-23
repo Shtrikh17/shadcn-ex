@@ -1,11 +1,6 @@
 import React from "react"
 
-export interface IconsProps{
-    sizes?: {
-        remove?: number,
-        add?: number
-    }
-}
+
 
 export interface StringChipsInputProps {
     /** Array of chip values */

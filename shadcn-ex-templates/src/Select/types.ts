@@ -5,3 +5,10 @@ export interface SelectItem{
     label: string
     view?: React.ReactNode
 }
+
+export interface IconsProps{
+    sizes?: {
+        remove?: number,
+        add?: number
+    }
+}

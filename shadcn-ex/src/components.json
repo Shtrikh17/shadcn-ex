@@ -1,19 +1,26 @@
 {
-  "registry": [{
-    "name": "SimpleSelect",
-    "files": ["Select/SimpleSelect.tsx", "Select/types.ts"],
-    "requirements": ["popover"]
-  },
-  {
-    "name": "Chip",
-    "files": ["Chips/Chip.tsx"]
-  },
-  {
-    "name": "ChipList",
-    "files": ["Chips/ChipList.tsx"],
-    "requirements": ["popover"],
-    "dependencies": ["Chip"]
-  }
+  "registry": [
+    {
+      "name": "SimpleSelect",
+      "files": ["Select/SimpleSelect.tsx", "Select/types.ts"],
+      "requirements": ["popover"]
+    },
+    {
+      "name": "Chip",
+      "files": ["Chips/Chip.tsx"]
+    },
+    {
+      "name": "ChipList",
+      "files": ["Chips/ChipList.tsx"],
+      "requirements": ["popover"],
+      "dependencies": ["Chip"]
+    },
+    {
+      "name": "MultiSelect",
+      "files": ["Select/MultiSelect.tsx", "Select/types.ts"],
+      "dependencies": ["ChipList"],
+      "requirements": ["popover"]
+    }
   ],
   "requirements": [
     {"name":  "popover", "file": "popover.tsx"}

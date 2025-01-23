@@ -1,10 +1,12 @@
+// @ts-ignore
 import React, {useState} from "react"
 import {Meta, StoryObj} from "@storybook/react";
-import {MultiSelect} from "../MultiSelect.tsx"
-import {SelectItem} from "../types";
+import {MultiSelect} from "../../Select/MultiSelect"
+import {SelectItem} from "../../Select/types";
 
 const meta: Meta<typeof MultiSelect> = {
-    component: MultiSelect
+    component: MultiSelect,
+    title: "Select/MultiSelect",
 }
 
 export default meta
@@ -36,8 +38,8 @@ export const Example = () => {
         setValue(x)
     }
 
-    return <div style={{width: "300px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-        <MultiSelect items={items} onSelect={onSelect} value={value} placeholder={'test'} />
+    return <div>
+        <MultiSelect items={items} onSelect={onSelect} value={value} />
     </div>
 }
 

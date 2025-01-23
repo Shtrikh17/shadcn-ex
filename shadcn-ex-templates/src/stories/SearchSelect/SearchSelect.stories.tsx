@@ -1,11 +1,13 @@
+// @ts-ignore
 import React, {useEffect, useRef, useState} from "react"
 import {Meta, StoryObj} from "@storybook/react";
-import {SearchSelect} from "./SearchSelect.tsx"
-import {SelectItem} from "../types";
+import {SearchSelect} from "../../Select/SearchSelect"
+import {SelectItem} from "../../Select/types";
 import * as Dialog from "@radix-ui/react-dialog";
 
 const meta: Meta<typeof SearchSelect> = {
-    component: SearchSelect
+    component: SearchSelect,
+    title: "Select/SearchSelect",
 }
 
 export default meta
@@ -47,7 +49,6 @@ export const Example = () => {
         <SearchSelect items={filteredItems} onSelect={onSelect} value={value} nullable={true} placeholder={'test'}
                       searchValue={searchValue}
                       onSearchValueChange={onSearch}
-                      container={document.body}
         />
     </div>
 }
@@ -100,7 +101,6 @@ export const ExampleWithModal = () => {
                     <SearchSelect items={filteredItems} onSelect={onSelect} value={value} nullable={true} placeholder={'test'}
                                   searchValue={searchValue}
                                   onSearchValueChange={onSearch}
-                                  container={ref.current}
                     />
                     <div>TESTTEST</div>
                     <input placeholder={"Test"} />

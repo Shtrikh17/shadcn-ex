@@ -1,17 +1,40 @@
 import React, {useRef, useState} from "react";
-import "./SearchSelect.scss"
-import {SearchSelectProps} from "./SearchSelect.types";
 import {ChevronDown, XIcon} from "lucide-react";
-import {SelectItem} from "../types";
+import {SelectItem} from "./types";
 import * as Popover from "@radix-ui/react-popover"
+
+export interface SearchSelectProps {
+    /** Array of items */
+    items: SelectItem[],
+
+    /** Function to select item */
+    onSelect: (value: SelectItem | null) => void,
+
+    /** Current selection */
+    value: SelectItem | null,
+
+    /** Input placeholder */
+    placeholder?: string,
+
+    /** Nullability */
+    nullable?: boolean
+
+    /** Search value */
+    searchValue: string
+
+    /** Hook on search value change */
+    onSearchValueChange: (s: string) => void
+}
+
 
 export const SearchSelect = ({items, value, onSelect, nullable=true, ...props}: SearchSelectProps) => {
     const targetRef = useRef(null)
     const [searchActive, setSearchActive] = useState(false)
 
-    const handleSelect = (e: React.MouseEvent<Element, MouseEvent>, value: SelectItem) => {
+    const handleSelect = (e: React.MouseEvent<Element, MouseEvent>, value: SelectItem|null) => {
         e.stopPropagation() // Keep the popover open as it is controlled
         onSelect(value);
+        props.onSearchValueChange(value.label || '')
         setSearchActive(false);
     }
 
@@ -33,7 +56,7 @@ export const SearchSelect = ({items, value, onSelect, nullable=true, ...props}: 
     else{
         icon = <XIcon
             size={20}
-            className={"scotch-select-simple-icon-reset"}
+            className={"hover:bg-destructive hover:text-destructive-foreground rounded p-1 cursor-pointer"}
             onClick={(e) => {
                 handleSelect(e, null)
             }}

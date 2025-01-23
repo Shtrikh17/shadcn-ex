@@ -7,6 +7,7 @@ FILES_TO_COPY=(
   "Select/types.ts"
   "Chips/Chip.tsx"
   "Chips/ChipList.tsx"
+  "Select/MultiSelect.tsx"
 )
 SOURCE_DIR="../shadcn-ex-templates/src"
 DEST_DIR="./dist"

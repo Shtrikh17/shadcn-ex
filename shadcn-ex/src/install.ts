@@ -20,28 +20,28 @@ interface ComponentsFileStructure{
 
 
 
-export const install_component = (name: string) => {
+export const install_component = (name: string, offset=0) => {
     const targetDirectory = getTargetDirectory()
     const componentsMeta: ComponentsFileStructure = JSON.parse(fs.readFileSync(`${__dirname}/components.json`).toString())
 
     const componentMeta = componentsMeta.registry.find(c => c.name === name)
     if (!componentMeta) {
-        console.error(`Component ${name} not found.`)
+        console.error(`${' '.repeat(offset*2)}[-] Component ${name} not found.`)
         process.exit(1)
     }
 
     if(componentMeta.dependencies){
         for(let dep of componentMeta.dependencies) {
-            console.log(`[*] ${name} requires ${dep}. Trying to install..`)
-            install_component(dep)
+            console.log(`${' '.repeat(offset*2)}[*] ${name} requires ${dep}. Trying to install..`)
+            install_component(dep, offset+1)
         }
     }
 
     if(componentMeta.requirements){
         for(let dep of componentMeta.requirements) {
-            console.log(`[*] ${name} requires ${dep} of shadcn. Checking installation...`)
-            if(!checkComponentDependency(dep, componentsMeta.requirements)){
-                console.error(`[-] Dependency ${dep} not found.`)
+            console.log(`${' '.repeat(offset*2)}[*] ${name} requires ${dep} of shadcn. Checking installation...`)
+            if(!checkComponentDependency(dep, componentsMeta.requirements, offset)){
+                console.error(`${' '.repeat(offset*2)}[-] Dependency ${dep} not found.`)
                 process.exit(1)
             }
         }
@@ -54,7 +54,7 @@ export const install_component = (name: string) => {
         fs.copyFileSync(source, dest)
     }
 
-    console.log(`[+] Component ${name} has been installed`)
+    console.log(`${' '.repeat(offset*2)}[+] Component ${name} has been installed`)
 }
 
 const getTargetDirectory = () => {
@@ -73,10 +73,10 @@ const getShadcnDirectory = (): string => {
     return path.join(target_project_directory, "components", "ui");
 }
 
-const checkComponentDependency = (component: string, requirements: RequirementType[]) => {
+const checkComponentDependency = (component: string, requirements: RequirementType[], offset=0) => {
     let requirement = requirements.find(c => c.name === component);
     if(!requirement){
-        console.error(`Requirement ${requirement} not found.`)
+        console.error(`${' '.repeat(offset*2)}Requirement ${requirement} not found.`)
         process.exit(1)
     }
     const shadcnDirectory = getShadcnDirectory()
