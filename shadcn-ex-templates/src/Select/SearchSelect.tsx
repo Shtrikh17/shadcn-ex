@@ -34,7 +34,7 @@ export const SearchSelect = ({items, value, onSelect, nullable=true, ...props}: 
     const handleSelect = (e: React.MouseEvent<Element, MouseEvent>, value: SelectItem|null) => {
         e.stopPropagation() // Keep the popover open as it is controlled
         onSelect(value);
-        props.onSearchValueChange(value.label || '')
+        props.onSearchValueChange(value?.label || '')
         setSearchActive(false);
     }
 
