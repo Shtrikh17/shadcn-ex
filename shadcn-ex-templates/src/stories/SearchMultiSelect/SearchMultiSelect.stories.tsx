@@ -1,10 +1,11 @@
 import React, {useState} from "react"
 import {Meta, StoryObj} from "@storybook/react";
-import {SearchMultiSelect} from "./SearchMultiSelect.tsx"
-import {SelectItem} from "../types";
+import {SearchMultiSelect} from "../../Select/SearchMultiSelect.tsx"
+import {SelectItem} from "../../Select/types";
 
 const meta: Meta<typeof SearchMultiSelect> = {
-    component: SearchMultiSelect
+    component: SearchMultiSelect,
+    title: "Select/SearchMultiSelect"
 }
 
 export default meta
@@ -43,7 +44,7 @@ export const Example = () => {
         setValue(x)
     }
 
-    return <div style={{width: "300px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+    return <div>
         <SearchMultiSelect
             items={filteredItems}
             onSelect={onSelect}

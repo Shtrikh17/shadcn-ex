@@ -22,7 +22,7 @@ export const ChipAction = () => {
     return <div>
         <Chip
             actions={[
-                <Pencil size={20} className="hover:bg-accent rounded p-2 cursor-pointer" />
+                <Pencil size={20} className="hover:bg-accent rounded p-1 cursor-pointer" />
             ]}
             className={"chip-story"}
         >

@@ -1,10 +1,10 @@
 import React, {useState} from "react"
 import {Meta, StoryObj} from "@storybook/react";
-import {AutoComplete} from "./AutoComplete";
-import {AutoCompleteItem} from "./AutoComplete.types";
+import {AutoComplete} from "../../Autocomplete/AutoComplete";
 
 const meta: Meta<typeof AutoComplete> = {
-    component: AutoComplete
+    component: AutoComplete,
+    title: "Autocomplete/Autocomplete"
 }
 
 export default meta
@@ -29,7 +29,7 @@ export const Example = () => {
         setSearchValue(x)
     }
 
-    return <div style={{width: "300px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+    return <div >
         <AutoComplete items={variants} onSelect={onSelect} placeholder={"Some value"} searchValue={searchValue} onSearch={onSearch} />
     </div>
 }

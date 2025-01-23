@@ -2,8 +2,7 @@
   "registry": [
     {
       "name": "SimpleSelect",
-      "files": ["Select/SimpleSelect.tsx", "Select/types.ts"],
-      "requirements": ["popover"]
+      "files": ["Select/SimpleSelect.tsx", "Select/types.ts"]
     },
     {
       "name": "Chip",
@@ -20,10 +19,30 @@
       "files": ["Select/MultiSelect.tsx", "Select/types.ts"],
       "dependencies": ["ChipList"],
       "requirements": ["popover"]
+    },
+    {
+      "name": "SearchSelect",
+      "files": ["Select/SearchSelect.tsx", "Select/types.ts"]
+    },
+    {
+      "name": "SearchMultiSelect",
+      "files": ["Select/SearchMultiSelect.tsx", "Select/types.ts"],
+      "dependencies": ["ChipList"]
+    },
+    {
+      "name": "Autocomplete",
+      "files": ["Autocomplete/Autocomplete.tsx"]
+    },
+    {
+      "name": "StringsListInput",
+      "files": ["Input/StringsListInput.tsx"],
+      "requirements": ["popover", "input", "button"]
     }
   ],
   "requirements": [
-    {"name":  "popover", "file": "popover.tsx"}
+    {"name":  "popover", "file": "popover.tsx"},
+    {"name":  "input", "file": "input.tsx"},
+    {"name":  "button", "file": "button.tsx"}
   ]
 }
 
