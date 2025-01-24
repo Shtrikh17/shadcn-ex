@@ -77,7 +77,7 @@ export const SearchSelect = ({items, value, onSelect, nullable=true, ...props}: 
             <Popover.Anchor asChild>
                 <div
                     className={"rounded flex border-solid border-[1px] border-lightgray p-1 px-2 " +
-                        "items-center hover:bg-accent cursor-pointer h-[30px] bg-background group"}
+                        "items-center hover:bg-accent cursor-pointer bg-background group"}
                     onClick={() => setSearchActive(true)}
                 >
                     <div className={"flex-1"}>

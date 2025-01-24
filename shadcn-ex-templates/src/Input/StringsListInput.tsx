@@ -10,7 +10,7 @@ export interface StringListInputProps{
     strings: Array<string>,
     onChange: (s: Array<string>) => void,
     caption?: string
-    validator?: string
+    validator?: RegExp
     uiStrings?: UIStrings
 }
 
@@ -94,6 +94,7 @@ export const StringsListInput = (props: StringListInputProps) => {
             <AddNewStringButton
                 onSubmit={s => props.onChange([...props.strings, s])}
                 uiStrings={props.uiStrings}
+                validator={props.validator}
             />
             <ChipList>
                 {

@@ -72,7 +72,7 @@ export const SearchMultiSelect = ({collapseOnSelect=false, ...props}: SearchMult
             <Popover.Anchor asChild>
                 <div
                     className={"rounded flex border-solid border-[1px] border-lightgray p-1 px-2 " +
-                        "items-center hover:bg-accent cursor-pointer h-[30px] bg-background group w-[500px]"}
+                        "items-center hover:bg-accent cursor-pointer bg-background group"}
                     onClick={() => setSearchActive(true)}
                 >
                     <div className={"flex-1"}>
