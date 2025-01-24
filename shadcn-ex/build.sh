@@ -1,7 +1,7 @@
 #!/bin/bash
 tsc
 cp src/components.json dist/
-cp Readme.md dist/
+cp ../README.md ./
 
 FILES_TO_COPY=(
   "Select/SimpleSelect.tsx"

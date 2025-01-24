@@ -59,8 +59,9 @@ export const install_component = (name: string, offset=0) => {
 }
 
 const getTargetDirectory = () => {
-    const target_project_directory = process.cwd();
-    const target_directory = path.join(target_project_directory, "components", "shadcn-ex");
+    let componentsPath = getComponentsPath()
+    if(!componentsPath) return null
+    const target_directory = path.join(componentsPath, "components", "shadcn-ex");
 
     if(!fs.existsSync(target_directory)) {
         fs.mkdirSync(target_directory);

@@ -1,11 +1,10 @@
 {
   "name": "@shtrikh17/shadcn-ex",
-  "version": "1.0.2",
+  "version": "1.0.8",
   "type": "commonjs",
   "scripts": {
     "build": "./build.sh",
-    "test": "npm run build && npm run ",
-    "publish": "npm publish --access public"
+    "test": "npm run build && npm run "
   },
   "bin": {
     "shadcn-ex": "./dist/main.js"
