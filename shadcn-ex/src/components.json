@@ -37,12 +37,18 @@
       "name": "StringsListInput",
       "files": ["Input/StringsListInput.tsx"],
       "requirements": ["popover", "input", "button"]
+    },
+    {
+      "name": "PopConfirm",
+      "files": ["PopConfirm/PopConfirm.tsx"],
+      "requirements": ["popover", "button"]
     }
   ],
   "requirements": [
     {"name":  "popover", "file": "popover.tsx"},
     {"name":  "input", "file": "input.tsx"},
-    {"name":  "button", "file": "button.tsx"}
+    {"name":  "button", "file": "button.tsx"},
+    {"name": "popover", "file": "popover.tsx"}
   ]
 }
 
