@@ -29,3 +29,4 @@ That's it. Now you can edit the components the way you want. The components are 
 | Chip              | A chip component which can be used to display a single value.                                                  |
 | ChipList          | A chip list component which can be used to display multiple values.                                            |
 | StringsListInput  | An input component which can be used to input multiple values.                                                 |
+| PopConfirm        | A pop confirm component which can be used to confirm an action.                                                |
