@@ -36,7 +36,8 @@
     {
       "name": "StringsListInput",
       "files": ["Input/StringsListInput.tsx"],
-      "requirements": ["popover", "input", "button"]
+      "requirements": ["popover", "input", "button"],
+      "dependencies": ["ChipList"]
     },
     {
       "name": "PopConfirm",
