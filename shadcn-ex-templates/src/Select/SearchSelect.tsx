@@ -85,7 +85,7 @@ export const SearchSelect = ({items, value, onSelect, nullable=true, ...props}: 
                             className={"bg-background group-hover:bg-accent group-hover:text-accent-foreground outline-none"}
                             onChange={e => props.onSearchValueChange(e.target.value)}
                             value={!searchActive && value?.label ? value?.label : props.searchValue}
-                            placeholder={value ? props.placeholder : value?.label.toString()}
+                            placeholder={value ? value?.label : props.placeholder}
                             onFocus={() => onStartSearch()}
                             ref={inputRef}
                         />
