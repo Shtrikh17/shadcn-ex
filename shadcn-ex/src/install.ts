@@ -53,6 +53,10 @@ export const install_component = (name: string, offset=0) => {
         const dest = `${targetDirectory}/${file}`
         fs.mkdirSync(path.dirname(dest), { recursive: true })
         fs.copyFileSync(source, dest)
+
+        // TODO: it is necessary to overwrite import of shadcn/ui components with correct one from components.json
+        // 1. Read components.json for shadcn/ui location
+        // 2. Substitute '@/components/ui' with shadcn/ui location in file
     }
 
     console.log(`${' '.repeat(offset*2)}[+] Component ${name} has been installed`)
@@ -71,6 +75,11 @@ const getTargetDirectory = () => {
 }
 
 const getShadcnDirectory = (): string | null => {
+    // TODO: It is not completely true:
+    // 1. Get components path (actually import alias from tsconfig)
+    // 2. Get shadcn/ui directory from 'components.json'
+    // 3. Replace '@/...' with 'componentsPath' excluding asterisk
+
     let componentsPath = getComponentsPath()
     if(!componentsPath) return null
     return path.join(componentsPath, "components", "ui");

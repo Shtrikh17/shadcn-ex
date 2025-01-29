@@ -5,10 +5,10 @@ import {SearchSelect} from "./Select/SearchSelect"
 import {SearchMultiSelect} from "./Select/SearchMultiSelect"
 import {Chip} from "./Chips/Chip"
 import {ChipList} from "./Chips/ChipList"
-import {StringChipsInput} from "./Chips/StringChipsInput/StringChipsInput"
+import {StringsListInput} from "./Input/StringsListInput"
 
 export {
     AutoComplete,
     SearchSelect, SimpleSelect, MultiSelect, SearchMultiSelect,
-    Chip, ChipList, StringChipsInput
+    Chip, ChipList, StringsListInput
 }

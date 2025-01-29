@@ -41,7 +41,7 @@
     },
     {
       "name": "PopConfirm",
-      "files": ["PopConfirm/PopConfirm.tsx"],
+      "files": ["Dialogs/PopConfirm.tsx"],
       "requirements": ["popover", "button"]
     }
   ],
