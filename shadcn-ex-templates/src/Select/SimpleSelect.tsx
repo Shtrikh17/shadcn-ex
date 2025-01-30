@@ -52,7 +52,7 @@ export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true
             <Popover.Anchor asChild>
                 <div
                     className={"rounded flex border-solid border p-1 px-2 " +
-                    "items-center hover:bg-accent cursor-pointer bg-transparent"}
+                    "items-center hover:bg-accent cursor-pointer bg-transparent h-9"}
                      onClick={() => setOpen(x=>!x)}
                 >
                     <div className={"flex-1"}>
