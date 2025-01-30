@@ -38,7 +38,6 @@ export const install_component = (name: string, offset=0) => {
     }
 
     if(componentMeta.requirements){
-
         for(let dep of componentMeta.requirements) {
             console.log(`${' '.repeat(offset*2)}[*] ${name} requires ${dep} of shadcn. Checking installation...`)
             if(!checkComponentDependency(dep, componentsMeta.requirements, offset)){

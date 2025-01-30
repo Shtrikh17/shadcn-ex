@@ -51,8 +51,8 @@ export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true
             <Popover.Trigger style={{display: 'none'}}/>
             <Popover.Anchor asChild>
                 <div
-                    className={"rounded flex border-solid border-[1px] border-lightgray p-1 px-2 " +
-                    "items-center hover:bg-accent cursor-pointer bg-background"}
+                    className={"rounded flex border-solid border p-1 px-2 " +
+                    "items-center hover:bg-accent cursor-pointer bg-transparent"}
                      onClick={() => setOpen(x=>!x)}
                 >
                     <div className={"flex-1"}>
@@ -62,8 +62,8 @@ export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true
                 </div>
             </Popover.Anchor>
             <Popover.Portal container={targetRef.current}>
-                <Popover.Content className={"mt-2 bg-background border-solid rounded border-[1px]" +
-                    " border-gray-600 p-1 box-border w-[var(--radix-popper-anchor-width)]"}>
+                <Popover.Content className={"mt-2 bg-background border-solid rounded border" +
+                    " p-1 box-border w-[var(--radix-popper-anchor-width)]"}>
                     <div>
                         {items.map(x => <div
                             className={"px-2 py-1 cursor-pointer rounded hover:bg-accent"}
