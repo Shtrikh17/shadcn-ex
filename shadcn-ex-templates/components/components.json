@@ -1,0 +1,63 @@
+{
+  "registry": [
+    {
+      "name": "SimpleSelect",
+      "files": ["Select/SimpleSelect.tsx", "Select/types.ts"]
+    },
+    {
+      "name": "Chip",
+      "files": ["Chips/Chip.tsx"]
+    },
+    {
+      "name": "ChipList",
+      "files": ["Chips/ChipList.tsx"],
+      "requirements": ["popover"],
+      "dependencies": ["Chip"]
+    },
+    {
+      "name": "MultiSelect",
+      "files": ["Select/MultiSelect.tsx", "Select/types.ts"],
+      "dependencies": ["ChipList"],
+      "requirements": ["popover"]
+    },
+    {
+      "name": "SearchSelect",
+      "files": ["Select/SearchSelect.tsx", "Select/types.ts"]
+    },
+    {
+      "name": "SearchMultiSelect",
+      "files": ["Select/SearchMultiSelect.tsx", "Select/types.ts"],
+      "dependencies": ["ChipList"]
+    },
+    {
+      "name": "AutoComplete",
+      "files": ["AutoComplete/AutoComplete.tsx"]
+    },
+    {
+      "name": "StringsListInput",
+      "files": ["Input/StringsListInput.tsx"],
+      "requirements": ["popover", "input", "button"],
+      "dependencies": ["ChipList"]
+    },
+    {
+      "name": "PopConfirm",
+      "files": ["Dialogs/PopConfirm.tsx"],
+      "requirements": ["popover", "button"]
+    },
+    {
+      "name": "Pagination",
+      "files": ["Pagination/Pagination.tsx"]
+    },
+    {
+      "name": "UploadButton",
+      "files": ["Buttons/UploadButton.tsx"]
+    }
+  ],
+  "requirements": [
+    {"name":  "popover", "file": "popover.tsx"},
+    {"name":  "input", "file": "input.tsx"},
+    {"name":  "button", "file": "button.tsx"},
+    {"name": "popover", "file": "popover.tsx"}
+  ]
+}
+
