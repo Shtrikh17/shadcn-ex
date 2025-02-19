@@ -7,6 +7,7 @@ import {Chip} from "../Chips/Chip";
 import {Button} from "@/components/ui/button";
 
 export interface StringListInputProps{
+    className?: string
     strings: Array<string>,
     onChange: (s: Array<string>) => void,
     caption?: string
@@ -20,17 +21,6 @@ export interface UIStrings {
     valueRequired?: string
     addString?: string
     apply?: string
-}
-
-
-export const StringsListView = (props: {strings: Array<string>}) => {
-    return (
-        <div className={"flex flex-wrap gap-1 items-center"}>
-            {
-                props.strings.map((s, i) => <Chip key={i}>{s}</Chip>)
-            }
-        </div>
-    )
 }
 
 const AddNewStringButton = (props: {
@@ -90,13 +80,13 @@ const AddNewStringButton = (props: {
 export const StringsListInput = (props: StringListInputProps) => {
 
     return (
-        <div className={"flex flex-wrap gap-1 items-center mt-2"}>
+        <div className={"flex flex-wrap gap-2 items-center mt-2 border rounded px-2 py-1 overflow-y-auto " +
+            "max-h-[250px]" + (props.className ? ` ${props.className}` : '')}>
             <AddNewStringButton
                 onSubmit={s => props.onChange([...props.strings, s])}
                 uiStrings={props.uiStrings}
                 validator={props.validator}
             />
-            <ChipList>
                 {
                     props.strings.map((s, i) => <Chip key={i} actions={[
                         <TrashIcon
@@ -107,7 +97,6 @@ export const StringsListInput = (props: StringListInputProps) => {
                         />
                     ]}>{s}</Chip>)
                 }
-            </ChipList>
         </div>
     )
 }

@@ -63,7 +63,7 @@ export const SimpleSelect = ({items, value, onSelect, placeholder, nullable=true
             </Popover.Anchor>
             <Popover.Portal container={targetRef.current}>
                 <Popover.Content className={"mt-2 bg-background border-solid rounded border" +
-                    " p-1 box-border w-[var(--radix-popper-anchor-width)]"}>
+                    " p-1 box-border w-[var(--radix-popper-anchor-width)] max-h-[200px] overflow-y-auto"}>
                     <div>
                         {items.map(x => <div
                             className={"px-2 py-1 cursor-pointer rounded hover:bg-accent"}

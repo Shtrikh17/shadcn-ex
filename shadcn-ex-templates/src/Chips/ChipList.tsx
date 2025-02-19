@@ -23,7 +23,7 @@ export const ChipList = (props: ChipListProps) => {
         items.push(<React.Fragment key={i}>{elements[i]}</React.Fragment>)
     }
     if(bound < elements.length) items.push(
-        <Popover>
+        <Popover key={'...'}>
             <PopoverTrigger>
                 <div>...</div>
             </PopoverTrigger>
@@ -40,7 +40,7 @@ export const ChipList = (props: ChipListProps) => {
     )
 
 
-    return <div className={"flex gap-1"}>
+    return <div className={"flex gap-1 flex-wrap"}>
         {items}
     </div>
 }
