@@ -2,7 +2,6 @@ import {PlusIcon, TrashIcon} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {useState} from "react";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
-import {ChipList} from "../Chips/ChipList";
 import {Chip} from "../Chips/Chip";
 import {Button} from "@/components/ui/button";
 

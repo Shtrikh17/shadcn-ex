@@ -40,6 +40,11 @@
       "dependencies": ["ChipList"]
     },
     {
+      "name": "StringsGroupInput",
+      "files": ["Input/StringsGroupInput.tsx"],
+      "requirements": ["popover", "input", "button", "table"]
+    },
+    {
       "name": "PopConfirm",
       "files": ["Dialogs/PopConfirm.tsx"],
       "requirements": ["popover", "button"]
@@ -49,7 +54,9 @@
     {"name":  "popover", "file": "popover.tsx"},
     {"name":  "input", "file": "input.tsx"},
     {"name":  "button", "file": "button.tsx"},
-    {"name": "popover", "file": "popover.tsx"}
+    {"name": "popover", "file": "popover.tsx"},
+    {"name": "switch", "file": "switch.tsx"},
+    {"name": "table", "file": "table.tsx"}
   ]
 }
 

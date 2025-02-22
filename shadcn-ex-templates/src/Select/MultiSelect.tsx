@@ -1,7 +1,6 @@
 import React, {useRef, useState} from "react";
-import {CheckIcon, ChevronDown, SquareChevronDown, TrashIcon} from "lucide-react";
+import {CheckIcon, SquareChevronDown, TrashIcon} from "lucide-react";
 import {IconsProps, SelectItem} from "./types";
-import {ChipList} from "../Chips/ChipList";
 import {Chip} from "../Chips/Chip";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 

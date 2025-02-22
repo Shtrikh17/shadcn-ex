@@ -1,6 +1,6 @@
 {
   "name": "@shtrikh17/shadcn-ex",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "type": "commonjs",
   "scripts": {
     "build": "./build.sh",
