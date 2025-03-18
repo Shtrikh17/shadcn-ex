@@ -51,7 +51,7 @@
     },
     {
       "name": "UploadButton",
-      "files": ["UploadButton/UploadButton.tsx"],
+      "files": ["UploadButton/UploadButton.tsx"]
     }
   ],
   "requirements": [
