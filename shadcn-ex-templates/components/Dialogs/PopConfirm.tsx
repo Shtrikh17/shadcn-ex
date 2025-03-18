@@ -8,7 +8,7 @@ export interface PopConfirmProps {
     onOk: () => void,
 
     /** Action to run on cancel */
-    onCancel: () => void,
+    onCancel?: () => void,
 
     /** Caption */
     caption?: string,
@@ -37,7 +37,7 @@ export const PopConfirm = (props: PopConfirmProps) => {
 
     const cancel = async () => {
         setOpen(false)
-        props.onCancel()
+        if(props.onCancel) props.onCancel()
     }
 
     const ok = async () => {

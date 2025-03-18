@@ -12,7 +12,7 @@ export interface ChipProps {
 }
 
 export const Chip = (props: ChipProps) => {
-    return <div className={"px-2 py-1 border-solid rounded border-[1px] border-lightgray inline-block items-center justify-center"}>
+    return <div className={"px-2 py-1 border rounded inline-block items-center justify-center"}>
         <div className={"flex items-center gap-4"}>
             <div>{props.children}</div>
             {

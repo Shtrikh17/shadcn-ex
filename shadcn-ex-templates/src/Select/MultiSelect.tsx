@@ -80,6 +80,7 @@ export const MultiSelect = ({...props}: MultiSelectProps) => {
                     key={i}
                     actions={[
                         <TrashIcon
+                            key={1}
                             className={"hover:bg-destructive hover:text-destructive-foreground rounded p-1 cursor-pointer"}
                             size={props.icons?.sizes?.remove || 20}
                             onClick={() => toggleSelect(x)}

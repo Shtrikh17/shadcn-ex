@@ -15,7 +15,7 @@ interface UiStrings {
 
 export interface StringsGroupInputProps {
     value: Array<StringsGroup>
-    onChange: (f: (s: Array<StringsGroup>) => Array<StringsGroup>) => any
+    onChange: (s: Array<StringsGroup>) => void
     placeholders?: StringsGroup
     keys: Array<string>
     labels: Array<string>
@@ -25,15 +25,15 @@ export interface StringsGroupInputProps {
 
 export const StringsGroupInput = (props: StringsGroupInputProps) => {
     const onAdd = (v: {[key:string]: string}) => {
-        props.onChange(s => [...s, v])
+        props.onChange([...props.value, v])
     }
 
     const onDelete = (v: number) => {
-        props.onChange(s => s.filter((x,i) => i !== v))
+        props.onChange(props.value.filter((x,i) => i !== v))
     }
 
     return <div>
-        <div>
+        <div className={'mb-2'}>
             <AddSetButton
                 caption={props.caption}
                 keys={props.keys}

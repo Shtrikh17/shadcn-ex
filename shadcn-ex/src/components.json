@@ -48,6 +48,10 @@
       "name": "PopConfirm",
       "files": ["Dialogs/PopConfirm.tsx"],
       "requirements": ["popover", "button"]
+    },
+    {
+      "name": "UploadButton",
+      "files": ["UploadButton/UploadButton.tsx"],
     }
   ],
   "requirements": [
