@@ -31,7 +31,7 @@
     },
     {
       "name": "Autocomplete",
-      "files": ["Autocomplete/Autocomplete.tsx"]
+      "files": ["AutoComplete/AutoComplete.tsx"]
     },
     {
       "name": "StringsListInput",
@@ -51,7 +51,7 @@
     },
     {
       "name": "UploadButton",
-      "files": ["UploadButton/UploadButton.tsx"]
+      "files": ["Buttons/UploadButton.tsx"]
     }
   ],
   "requirements": [

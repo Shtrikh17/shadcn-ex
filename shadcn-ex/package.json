@@ -1,9 +1,10 @@
 {
   "name": "@shtrikh17/shadcn-ex",
-  "version": "1.8.10",
+  "version": "1.8.19",
   "type": "commonjs",
   "scripts": {
-    "build": "./build.sh",
+    "build": "node scripts/build.js",
+    "s:publish": "node scripts/publish.js",
     "test": "npm run build && npm run "
   },
   "bin": {
