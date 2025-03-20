@@ -19,14 +19,16 @@ npx @shtrikh17/shadcn-ex add <ComponentName>
 ```
 That's it. Now you can edit the components the way you want. The components are located in the `components/shadcn-ex` directory (near original `ui` directory).
 ## Components
-| Name              | Description                                                                                                    |
-|-------------------|----------------------------------------------------------------------------------------------------------------|
-| SimpleSelect      | A simple select component which can be used to select a single value from a list of options.                   |
-| MultiSelect       | A multi select component which can be used to select multiple values from a list of options.                   |
-| SearchSelect      | A search select component which can be used to search and select a single value from a list of options.        |
-| SearchMultiSelect | A search multi select component which can be used to search and select multiple values from a list of options. |
-| AutoComplete      | An auto complete component which can be used to search and select a single value from a list of options.       |
-| Chip              | A chip component which can be used to display a single value.                                                  |
-| ChipList          | A chip list component which can be used to display multiple values.                                            |
-| StringsListInput  | An input component which can be used to input multiple values.                                                 |
-| PopConfirm        | A pop confirm component which can be used to confirm an action.                                                |
+| Name               | Description                                                                                                    |
+|--------------------|----------------------------------------------------------------------------------------------------------------|
+| SimpleSelect       | A simple select component which can be used to select a single value from a list of options.                   |
+| MultiSelect        | A multi select component which can be used to select multiple values from a list of options.                   |
+| SearchSelect       | A search select component which can be used to search and select a single value from a list of options.        |
+| SearchMultiSelect  | A search multi select component which can be used to search and select multiple values from a list of options. |
+| AutoComplete       | An auto complete component which can be used to search and select a single value from a list of options.       |
+| Chip               | A chip component which can be used to display a single value.                                                  |
+| ChipList           | A chip list component which can be used to display multiple values.                                            |
+| StringsListInput   | An input component which can be used to input multiple values.                                                 |
+| PopConfirm         | A pop confirm component which can be used to confirm an action.                                                |
+| UploadButton       | An upload button component which can be used to upload files.                                                  |
+| Pagination         | A pagination component which can be used to navigate through pages.                                            |
