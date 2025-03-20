@@ -52,6 +52,10 @@
     {
       "name": "UploadButton",
       "files": ["Buttons/UploadButton.tsx"]
+    },
+    {
+      "name": "Pagination",
+      "files": ["Pagination/Pagination.tsx"]
     }
   ],
   "requirements": [

@@ -20,7 +20,7 @@ export const Pagination = (props: PaginationProps) => {
     }
 
     const page = React.useMemo(() => {
-        return Math.ceil(props.offset/(props.pageSize+1))
+        return Math.floor(props.offset/(props.pageSize))
     }, [props.pageSize, props.offset])
 
     return <ReactPaginate
